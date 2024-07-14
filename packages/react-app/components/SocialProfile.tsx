@@ -8,7 +8,7 @@ const SocialConnectUI: React.FC = () => {
   const [odisRegisteredAddresses, setOdisRegisteredAddresses] = useState("");
   const { data: session } = useSession();
 
-  const getLookupAddress = useCallback(async () => {
+  const getLookupAddress = async () => {
     if (session) {
       setLoading(true);
       try {
@@ -25,14 +25,6 @@ const SocialConnectUI: React.FC = () => {
         setLoading(false);
       }
     }
-  }, [lookupAddress, session]);
-
-  useEffect(() => {
-    getLookupAddress();
-  }, [getLookupAddress]);
-
-  if (!session) {
-    return null;
   }
 
   return (
@@ -56,7 +48,7 @@ const SocialConnectUI: React.FC = () => {
           <span className="text-black font-bold">
             {process.env.NEXT_PUBLIC_SOCIAL_CONNECT_PROVIDER === "GITHUB"
               ? "Github"
-              : ""}
+              : "Twitter"}
           </span>
         </p>
       </div>
