@@ -66,7 +66,7 @@ contract MiniSafe is ERC20, ReentrancyGuard {
         return downliners[upliner];
     }
 
-    function deposit(address tokenAddress, uint256 amount) public payable {
+    function deposit(address tokenAddress, uint256 amount) public nonReentrant payable {
         if (tokenAddress == CELO_TOKEN_ADDRESS) {
             require(amount > 0, "CELO deposit amount must be greater than 0");
             TokenBalance storage celoBalance = balances[msg.sender];
@@ -110,7 +110,7 @@ contract MiniSafe is ERC20, ReentrancyGuard {
         return block.timestamp - balances[depositor].depositTime;
     }
 
-    function breakTimelock(address tokenAddress) public payable {
+    function breakTimelock(address tokenAddress) external nonReentrant payable {
         require(
             (balances[msg.sender].celoBalance > 0 ||
                 balances[msg.sender].cUsdBalance > 0),
@@ -158,7 +158,7 @@ contract MiniSafe is ERC20, ReentrancyGuard {
         }
     }
 
-    function withdraw(address tokenAddress) public {
+    function withdraw(address tokenAddress) external nonReentrant {
         TokenBalance storage tokenBalance = balances[msg.sender];
         if (
             (tokenBalance.celoBalance > 0 &&

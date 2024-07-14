@@ -22,7 +22,3 @@ contract CounterTest is Test {
         assertEq(counter.number(), x);
     }
 }
-No files changed, compilation skipped
-Deployer: 0xb82896C4F251ed65186b416dbDb6f6192DFAF926
-Deployed to: 0x00A4B6b53bCE2FaD8Bcd39bF4AB94e4Cdda7b497
-Transaction hash: 0xd5c0d2d41f73ad3203ec62db629c60136721e46310874080684f4b9dcab79c0d
