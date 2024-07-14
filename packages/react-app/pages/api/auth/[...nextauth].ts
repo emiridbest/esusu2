@@ -1,6 +1,5 @@
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
-import TwitterProvider from "next-auth/providers/twitter";
 
 export const authOptions = {
   // Configure one or more authentication providers
@@ -9,10 +8,7 @@ export const authOptions = {
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
     }),
-    TwitterProvider({
-      clientId: process.env.TWITTER_ID as string,
-      clientSecret: process.env.TWITTER_SECRET as string,
-    }),
+    // ...add more providers here
   ],
   callbacks: {
     async jwt({ token, account }: { token: any; account: any }) {
@@ -31,21 +27,7 @@ export const authOptions = {
       token: any;
       user: any;
     }) {
-      if (process.env.NEXT_PUBLIC_SOCIAL_CONNECT_PROVIDER === "TWITTER") {
-        const base64Credentials = Buffer.from(
-          `${process.env.TWITTER_ID}:${process.env.TWITTER_SECRET}`
-        ).toString('base64');
-        const headers = new Headers({
-          Authorization: `Basic ${base64Credentials}`,
-        });
-
-        const res = await fetch(`https://api.twitter.com/2/users/${token.sub}`, {
-          headers,
-        });
-        const data = await res.json();
-        session.username = data.username;
-      }
-      else if (process.env.NEXT_PUBLIC_SOCIAL_CONNECT_PROVIDER === "GITHUB") {
+      if (process.env.NEXT_PUBLIC_SOCIAL_CONNECT_PROVIDER === "GITHUB") {
         const base64Credentials = btoa(
           `${process.env.GITHUB_ID}:${process.env.GITHUB_SECRET}`
         );
@@ -58,8 +40,13 @@ export const authOptions = {
         });
         const data = await res.json();
         session.username = data.login;
+      } else if (
+        process.env.NEXT_PUBLIC_SOCIAL_CONNECT_PROVIDER === "TWITTER"
+      ) {
+        console.log("token", token);
+        console.log("session", session);
+        console.log("user", user);
       }
-
       session.accessToken = token.accessToken;
       return session;
     },

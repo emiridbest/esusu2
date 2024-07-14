@@ -74,7 +74,7 @@ const Balance: React.FC = () => {
                 )}
                 <p className="text-sm">Your wallet balance</p>
                 <div className="flex justify-between">
-                    <p className="text-sm">{new Date().toLocaleTimeString()}</p>
+                    <p className="text-sm">{Math.floor(new Date().getTime())}</p>
                     <p className="text-sm">{new Date().toLocaleDateString()}</p>
                 </div>
             </div>

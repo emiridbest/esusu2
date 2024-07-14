@@ -2,16 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        fs: false,
-        crypto: false,
-      };
-    }
+  webpack: (config) => {
+    config.resolve.fallback = {
+      fs: false,
+    };
     return config;
   },
-  pageExtensions: ['tsx', 'ts'],
 };
 
 module.exports = nextConfig;

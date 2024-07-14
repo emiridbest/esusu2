@@ -71,7 +71,7 @@ export const useSocialConnect = () => {
     if (walletClient) {
       try {
         setLoading(true);
-        let response = await fetch("/api/socialconnect/register", {
+        const response = await fetch("/api/socialconnect/register", {
           method: "POST",
           body: JSON.stringify({
             account: walletClient?.account.address,
@@ -107,7 +107,7 @@ export const useSocialConnect = () => {
   const revoke = async (identifier: string) => {
     if (walletClient) {
       try {
-        let response = await fetch("/api/socialconnect/revoke", {
+        const response = await fetch("/api/socialconnect/revoke", {
           method: "POST",
           body: JSON.stringify({
             account: walletClient?.account.address,
