@@ -7,6 +7,9 @@
 - When a `downliner` makes a deposit,
   - `downliner` earns `1 MST` token
   - `upliner` earns `0.1 MST` token as referral reward
+ ![Esusu referral](https://github.com/user-attachments/assets/c0764eac-6684-431b-80fa-55a8cbc21ced)
+
+
 
 ### Summary of Milestone
 
@@ -103,3 +106,30 @@ Contributions are welcome! Please follow the standard GitHub flow:
 ### License
 
 This project is licensed under the [MIT License](LICENSE).
+![1](https://github.com/user-attachments/assets/2dc7eed1-3398-4a4a-b007-a6a2198b7a83)
+![2](https://github.com/user-attachments/assets/ad2966b3-3842-44b2-a959-e48bafa6210a)
+![3](https://github.com/user-attachments/assets/5b70644d-d1ce-478b-94ee-1ddf543800dc)
+![4](https://github.com/user-attachments/assets/a808c5c1-5011-4159-b8c6-f6b4a3ad7eea)
+![5](https://github.com/user-attachments/assets/6d3cbf55-dc8d-4189-9bfb-7c81b88c771d)
+![6](https://github.com/user-attachments/assets/cd456173-7592-4508-b58e-6f8944934180)
+![7](https://github.com/user-attachments/assets/3d96fb18-fc32-4d0b-8c72-aacba244e3e0)
+![8](https://github.com/user-attachments/assets/35f05bbd-50a8-43f5-9b39-d27ce4aa3bac)
+![9](https://github.com/user-attachments/assets/f7492885-67bb-4a2b-a6f4-a0f4cf80347b)
+![10](https://github.com/user-attachments/assets/a94ed227-ed71-4191-9161-3fe6dcdcc26e)
+![11](https://github.com/user-attachments/assets/caf38081-0691-4934-a770-214fe146bd1a)
+![12](https://github.com/user-attachments/assets/695724cf-c259-4d70-95ce-528245f101ad)
+![13](https://github.com/user-attachments/assets/ce7e9cbf-bacb-4a29-bc8e-fcdbe6e46b82)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
