@@ -1,4 +1,4 @@
-export const contractAddress = "0x9d9c1C9bae7d4666dAFF2511a743b97e418049C9"; //"0x00A4B6b53bCE2FaD8Bcd39bF4AB94e4Cdda7b497";
+export const contractAddress = "0x9d9c1C9bae7d4666dAFF2511a743b97e418049C9"; //mainnet () => "0x7A7347FC748f12160CFB9F89f6faC2376c0495A9";
 export const abi = [
   {
     "type": "constructor",

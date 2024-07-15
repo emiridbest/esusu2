@@ -36,8 +36,8 @@ The dApp is a 3 in 1 solution to solving issues related to financial inclusion a
 - **Frontend**: Next.js, Tailwind CSS, Typescript
 - **Backend**: Solidity, Ethereum blockchain
 - **Smart Contracts**: Foundry
-- **Deployment**: Alfajores(present deployment for the hackathon)
-- **Contract Address**: Alfajores 0xdFa504C66e22A07f42C5616c873829cBCcee38cd
+- **Deployment**: Alfajores(present deployment for the hackathon as well as demo video)
+- **Contract Address**: Alfajores 0xdFa504C66e22A07f42C5616c873829cBCcee38cd Mainnet 0x7A7347FC748f12160CFB9F89f6faC2376c0495A9
 - **Tokens**: `MST` MiniSafe Token as reward for locking up funds for both depositor and the upliner who referred.
 
 ### Setup Instructions
