@@ -14,7 +14,7 @@ const Loader = ({ alt }: { alt?: boolean }) => (
 
 
 export default function Home() {
-  const cUsdTokenAddress = "0x765DE816845861e75A25fCA122bb6898B8B1282a";
+  const cUsdTokenAddress = "0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1" //"0x765DE816845861e75A25fCA122bb6898B8B1282a";
   const celoAddress = "0x0000000000000000000000000000000000000000";
 
   const [depositAmount, setDepositAmount] = useState(0);

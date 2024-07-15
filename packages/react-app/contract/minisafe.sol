@@ -16,7 +16,7 @@ contract MiniSafe is ERC20{
     uint256 public lockDuration = 1 weeks;
     address private constant CELO_TOKEN_ADDRESS = address(0);
     address private constant CUSD_TOKEN_ADDRESS =
-        0x765DE816845861e75A25fCA122bb6898B8B1282a;
+        0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1: //0x765DE816845861e75A25fCA122bb6898B8B1282a;
 
     constructor() ERC20("miniSafeToken", "MST") {
         _mint(address(this), 21000000);

@@ -4,7 +4,7 @@ import { getContract, formatEther, createPublicClient, http } from "viem";
 import { celo, celoAlfajores } from "viem/chains";
 import { BrowserProvider} from 'ethers';
 import { stableTokenABI } from "@celo/abis";
-const STABLE_TOKEN_ADDRESS = "0x874069fa1eb16d44d622f2e0ca25eea172369bc1";
+const STABLE_TOKEN_ADDRESS = "0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1";
 
 const Balance: React.FC = () => {
     const [cUSDBalance, setCUSDBalance] = useState<string>('0');

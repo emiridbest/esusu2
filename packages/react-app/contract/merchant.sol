@@ -19,7 +19,7 @@ contract PayBills {
 
     // cUSD contract address
     address private constant CUSD_TOKEN_ADDRESS =
-        0x874069fa1eb16d44d622f2e0ca25eea172369bc1; //0x765DE816845861e75A25fCA122bb6898B8B1282a;
+        0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1; //0x765DE816845861e75A25fCA122bb6898B8B1282a;
 
     // Event emitted when merchant information is updated
     event MerchantUpdated(
