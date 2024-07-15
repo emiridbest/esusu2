@@ -1,797 +1,797 @@
-export const contractAddress = "0xf9d3f0cde68a24d4da3a1c9dd31952d85855c691";
+export const contractAddress = "0x8b9e9324E44Cbc78F21CcA71C1Cb84062c590826" //"0xf9d3f0cde68a24d4da3a1c9dd31952d85855c691";
 
 export const abi = [
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "spender",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "allowance",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "needed",
-				"type": "uint256"
-			}
-		],
-		"name": "ERC20InsufficientAllowance",
-		"type": "error"
+	  "type": "constructor",
+	  "inputs": [],
+	  "stateMutability": "nonpayable"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "sender",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "balance",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "needed",
-				"type": "uint256"
-			}
-		],
-		"name": "ERC20InsufficientBalance",
-		"type": "error"
+	  "type": "function",
+	  "name": "allowance",
+	  "inputs": [
+		{
+		  "name": "owner",
+		  "type": "address",
+		  "internalType": "address"
+		},
+		{
+		  "name": "spender",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "approver",
-				"type": "address"
-			}
-		],
-		"name": "ERC20InvalidApprover",
-		"type": "error"
+	  "type": "function",
+	  "name": "approve",
+	  "inputs": [
+		{
+		  "name": "spender",
+		  "type": "address",
+		  "internalType": "address"
+		},
+		{
+		  "name": "value",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "bool",
+		  "internalType": "bool"
+		}
+	  ],
+	  "stateMutability": "nonpayable"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "receiver",
-				"type": "address"
-			}
-		],
-		"name": "ERC20InvalidReceiver",
-		"type": "error"
+	  "type": "function",
+	  "name": "balanceOf",
+	  "inputs": [
+		{
+		  "name": "account",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "sender",
-				"type": "address"
-			}
-		],
-		"name": "ERC20InvalidSender",
-		"type": "error"
+	  "type": "function",
+	  "name": "campaignContributions",
+	  "inputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "spender",
-				"type": "address"
-			}
-		],
-		"name": "ERC20InvalidSpender",
-		"type": "error"
+	  "type": "function",
+	  "name": "campaignCounter",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "spender",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "value",
-				"type": "uint256"
-			}
-		],
-		"name": "Approval",
-		"type": "event"
+	  "type": "function",
+	  "name": "campaigns",
+	  "inputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "name",
+		  "type": "string",
+		  "internalType": "string"
+		},
+		{
+		  "name": "description",
+		  "type": "string",
+		  "internalType": "string"
+		},
+		{
+		  "name": "contributionAmount",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "payoutInterval",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "lastPayoutBlock",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "totalContributions",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "monthlyContribution",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "withdrawIndex",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "id",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "creator",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "campaignId",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "contributionAmount",
-				"type": "uint256"
-			}
-		],
-		"name": "CampaignCreated",
-		"type": "event"
+	  "type": "function",
+	  "name": "contribute",
+	  "inputs": [
+		{
+		  "name": "tokenAddress",
+		  "type": "address",
+		  "internalType": "address"
+		},
+		{
+		  "name": "amount",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "outputs": [],
+	  "stateMutability": "nonpayable"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "participant",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			}
-		],
-		"name": "ContributionMade",
-		"type": "event"
+	  "type": "function",
+	  "name": "createCampaign",
+	  "inputs": [
+		{
+		  "name": "_name",
+		  "type": "string",
+		  "internalType": "string"
+		},
+		{
+		  "name": "_description",
+		  "type": "string",
+		  "internalType": "string"
+		},
+		{
+		  "name": "_contributionAmount",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "outputs": [],
+	  "stateMutability": "nonpayable"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "participant",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			}
-		],
-		"name": "Defaulted",
-		"type": "event"
+	  "type": "function",
+	  "name": "decimals",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint8",
+		  "internalType": "uint8"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "participant",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			}
-		],
-		"name": "Staked",
-		"type": "event"
+	  "type": "function",
+	  "name": "fixedToken",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "address",
+		  "internalType": "contract IERC20"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "value",
-				"type": "uint256"
-			}
-		],
-		"name": "Transfer",
-		"type": "event"
+	  "type": "function",
+	  "name": "getAllCampaigns",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256[]",
+		  "internalType": "uint256[]"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "participant",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			}
-		],
-		"name": "Withdrawn",
-		"type": "event"
+	  "type": "function",
+	  "name": "getCampaignDetails",
+	  "inputs": [
+		{
+		  "name": "campaignId",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "string",
+		  "internalType": "string"
+		},
+		{
+		  "name": "",
+		  "type": "string",
+		  "internalType": "string"
+		},
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "",
+		  "type": "string",
+		  "internalType": "string"
+		},
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "spender",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "value",
-				"type": "uint256"
-			}
-		],
-		"name": "approve",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
+	  "type": "function",
+	  "name": "joinCampaign",
+	  "inputs": [
+		{
+		  "name": "campaignId",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "tokenAddress",
+		  "type": "address",
+		  "internalType": "address"
+		},
+		{
+		  "name": "userName",
+		  "type": "string",
+		  "internalType": "string"
+		}
+	  ],
+	  "outputs": [],
+	  "stateMutability": "payable"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "tokenAddress",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			}
-		],
-		"name": "contribute",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
+	  "type": "function",
+	  "name": "monthlyContribution",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_description",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_contributionAmount",
-				"type": "uint256"
-			}
-		],
-		"name": "createCampaign",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
+	  "type": "function",
+	  "name": "name",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "string",
+		  "internalType": "string"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "campaignId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "tokenAddress",
-				"type": "address"
-			},
-			{
-				"internalType": "string",
-				"name": "userName",
-				"type": "string"
-			}
-		],
-		"name": "joinCampaign",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
+	  "type": "function",
+	  "name": "owner",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "value",
-				"type": "uint256"
-			}
-		],
-		"name": "transfer",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
+	  "type": "function",
+	  "name": "payoutInterval",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "value",
-				"type": "uint256"
-			}
-		],
-		"name": "transferFrom",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
+	  "type": "function",
+	  "name": "stakingRequirementMultiplier",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_payoutInterval",
-				"type": "uint256"
-			}
-		],
-		"name": "updatePayoutInterval",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
+	  "type": "function",
+	  "name": "stakings",
+	  "inputs": [
+		{
+		  "name": "",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "isStaking",
+		  "type": "bool",
+		  "internalType": "bool"
+		},
+		{
+		  "name": "stakedAmount",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "earnedTokens",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "campaignId",
-				"type": "uint256"
-			}
-		],
-		"name": "withdraw",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
+	  "type": "function",
+	  "name": "symbol",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "string",
+		  "internalType": "string"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
+	  "type": "function",
+	  "name": "totalContributions",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "spender",
-				"type": "address"
-			}
-		],
-		"name": "allowance",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "function",
+	  "name": "totalSupply",
+	  "inputs": [],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "account",
-				"type": "address"
-			}
-		],
-		"name": "balanceOf",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "function",
+	  "name": "transfer",
+	  "inputs": [
+		{
+		  "name": "to",
+		  "type": "address",
+		  "internalType": "address"
+		},
+		{
+		  "name": "value",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "bool",
+		  "internalType": "bool"
+		}
+	  ],
+	  "stateMutability": "nonpayable"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "campaignContributions",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "function",
+	  "name": "transferFrom",
+	  "inputs": [
+		{
+		  "name": "from",
+		  "type": "address",
+		  "internalType": "address"
+		},
+		{
+		  "name": "to",
+		  "type": "address",
+		  "internalType": "address"
+		},
+		{
+		  "name": "value",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "bool",
+		  "internalType": "bool"
+		}
+	  ],
+	  "stateMutability": "nonpayable"
 	},
 	{
-		"inputs": [],
-		"name": "campaignCounter",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "function",
+	  "name": "updatePayoutInterval",
+	  "inputs": [
+		{
+		  "name": "_payoutInterval",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "outputs": [],
+	  "stateMutability": "nonpayable"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "campaigns",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "description",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "contributionAmount",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "payoutInterval",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "lastPayoutBlock",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "totalContributions",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "monthlyContribution",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "withdrawIndex",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "id",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "function",
+	  "name": "userNameToAddress",
+	  "inputs": [
+		{
+		  "name": "",
+		  "type": "string",
+		  "internalType": "string"
+		}
+	  ],
+	  "outputs": [
+		{
+		  "name": "",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ],
+	  "stateMutability": "view"
 	},
 	{
-		"inputs": [],
-		"name": "decimals",
-		"outputs": [
-			{
-				"internalType": "uint8",
-				"name": "",
-				"type": "uint8"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "function",
+	  "name": "withdraw",
+	  "inputs": [
+		{
+		  "name": "campaignId",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ],
+	  "outputs": [],
+	  "stateMutability": "nonpayable"
 	},
 	{
-		"inputs": [],
-		"name": "fixedToken",
-		"outputs": [
-			{
-				"internalType": "contract IERC20",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "event",
+	  "name": "Approval",
+	  "inputs": [
+		{
+		  "name": "owner",
+		  "type": "address",
+		  "indexed": true,
+		  "internalType": "address"
+		},
+		{
+		  "name": "spender",
+		  "type": "address",
+		  "indexed": true,
+		  "internalType": "address"
+		},
+		{
+		  "name": "value",
+		  "type": "uint256",
+		  "indexed": false,
+		  "internalType": "uint256"
+		}
+	  ],
+	  "anonymous": false
 	},
 	{
-		"inputs": [],
-		"name": "getAllCampaigns",
-		"outputs": [
-			{
-				"internalType": "uint256[]",
-				"name": "",
-				"type": "uint256[]"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "event",
+	  "name": "CampaignCreated",
+	  "inputs": [
+		{
+		  "name": "creator",
+		  "type": "address",
+		  "indexed": true,
+		  "internalType": "address"
+		},
+		{
+		  "name": "campaignId",
+		  "type": "uint256",
+		  "indexed": false,
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "contributionAmount",
+		  "type": "uint256",
+		  "indexed": false,
+		  "internalType": "uint256"
+		}
+	  ],
+	  "anonymous": false
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "campaignId",
-				"type": "uint256"
-			}
-		],
-		"name": "getCampaignDetails",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "event",
+	  "name": "ContributionMade",
+	  "inputs": [
+		{
+		  "name": "participant",
+		  "type": "address",
+		  "indexed": true,
+		  "internalType": "address"
+		},
+		{
+		  "name": "amount",
+		  "type": "uint256",
+		  "indexed": false,
+		  "internalType": "uint256"
+		}
+	  ],
+	  "anonymous": false
 	},
 	{
-		"inputs": [],
-		"name": "monthlyContribution",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "event",
+	  "name": "Defaulted",
+	  "inputs": [
+		{
+		  "name": "participant",
+		  "type": "address",
+		  "indexed": true,
+		  "internalType": "address"
+		},
+		{
+		  "name": "amount",
+		  "type": "uint256",
+		  "indexed": false,
+		  "internalType": "uint256"
+		}
+	  ],
+	  "anonymous": false
 	},
 	{
-		"inputs": [],
-		"name": "name",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "event",
+	  "name": "Staked",
+	  "inputs": [
+		{
+		  "name": "participant",
+		  "type": "address",
+		  "indexed": true,
+		  "internalType": "address"
+		},
+		{
+		  "name": "amount",
+		  "type": "uint256",
+		  "indexed": false,
+		  "internalType": "uint256"
+		}
+	  ],
+	  "anonymous": false
 	},
 	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "event",
+	  "name": "Transfer",
+	  "inputs": [
+		{
+		  "name": "from",
+		  "type": "address",
+		  "indexed": true,
+		  "internalType": "address"
+		},
+		{
+		  "name": "to",
+		  "type": "address",
+		  "indexed": true,
+		  "internalType": "address"
+		},
+		{
+		  "name": "value",
+		  "type": "uint256",
+		  "indexed": false,
+		  "internalType": "uint256"
+		}
+	  ],
+	  "anonymous": false
 	},
 	{
-		"inputs": [],
-		"name": "payoutInterval",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "event",
+	  "name": "Withdrawn",
+	  "inputs": [
+		{
+		  "name": "participant",
+		  "type": "address",
+		  "indexed": true,
+		  "internalType": "address"
+		},
+		{
+		  "name": "amount",
+		  "type": "uint256",
+		  "indexed": false,
+		  "internalType": "uint256"
+		}
+	  ],
+	  "anonymous": false
 	},
 	{
-		"inputs": [],
-		"name": "stakingRequirementMultiplier",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "error",
+	  "name": "ERC20InsufficientAllowance",
+	  "inputs": [
+		{
+		  "name": "spender",
+		  "type": "address",
+		  "internalType": "address"
+		},
+		{
+		  "name": "allowance",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "needed",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ]
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "stakings",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "isStaking",
-				"type": "bool"
-			},
-			{
-				"internalType": "uint256",
-				"name": "stakedAmount",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "earnedTokens",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "error",
+	  "name": "ERC20InsufficientBalance",
+	  "inputs": [
+		{
+		  "name": "sender",
+		  "type": "address",
+		  "internalType": "address"
+		},
+		{
+		  "name": "balance",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		},
+		{
+		  "name": "needed",
+		  "type": "uint256",
+		  "internalType": "uint256"
+		}
+	  ]
 	},
 	{
-		"inputs": [],
-		"name": "symbol",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "error",
+	  "name": "ERC20InvalidApprover",
+	  "inputs": [
+		{
+		  "name": "approver",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ]
 	},
 	{
-		"inputs": [],
-		"name": "totalContributions",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "error",
+	  "name": "ERC20InvalidReceiver",
+	  "inputs": [
+		{
+		  "name": "receiver",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ]
 	},
 	{
-		"inputs": [],
-		"name": "totalSupply",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "error",
+	  "name": "ERC20InvalidSender",
+	  "inputs": [
+		{
+		  "name": "sender",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ]
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"name": "userNameToAddress",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+	  "type": "error",
+	  "name": "ERC20InvalidSpender",
+	  "inputs": [
+		{
+		  "name": "spender",
+		  "type": "address",
+		  "internalType": "address"
+		}
+	  ]
 	}
-]
+  ]

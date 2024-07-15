@@ -14,7 +14,7 @@ contract EsusuSmartContract is ERC20 {
 
     address private constant CELO_TOKEN_ADDRESS = address(0); // Example CELO token address
     address private constant CUSD_TOKEN_ADDRESS =
-        0x765DE816845861e75A25fCA122bb6898B8B1282a; // Example CUSD token address
+      0x874069fa1eb16d44d622f2e0ca25eea172369bc1; //  0x765DE816845861e75A25fCA122bb6898B8B1282a; // Example CUSD token address
 
     struct Campaign {
         string name;

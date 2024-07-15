@@ -19,7 +19,7 @@ interface Transaction {
   status: boolean;
 }
 
-const STABLE_TOKEN_ADDRESS = '0x765DE816845861e75A25fCA122bb6898B8B1282a';
+const STABLE_TOKEN_ADDRESS = 0x874069fa1eb16d44d622f2e0ca25eea172369bc1; //'0x765DE816845861e75A25fCA122bb6898B8B1282a';
 
 const truncateAddress = (address: string): string => {
   return address ? `${address.slice(0, 6)}...${address.slice(-4)}` : '';
