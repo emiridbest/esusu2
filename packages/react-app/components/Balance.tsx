@@ -17,7 +17,7 @@ const Balance: React.FC = () => {
                 const signer = await provider.getSigner();
 
                 const client = createPublicClient({
-                    chain: celo,
+                    chain: celoAlfajores,
                     transport: http(),
                 });
 
