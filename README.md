@@ -5,21 +5,21 @@
 - We implemented a referral feature to reward users who tell their friends about our solutions
 - This creates an `upliner` and `downliner` relationship
 - When a `downliner` makes a deposit,
-  - `downliner` earns `1 MST` token
-  - `upliner` earns `0.1 MST` token as referral reward
+  - `downliner` earns `2 MST` token
+  - `upliner` earns `1 MST` token as referral reward
  ![Esusu referral](https://github.com/user-attachments/assets/c0764eac-6684-431b-80fa-55a8cbc21ced)
 
 
 
 ### Summary of Milestone
 
-1. Redifining the reward structure
+1. Redefining the reward structure
 2. Improving UI/UX
 3. Rewriting smart contracts
 4. Deploying in foundry as well as verification
-5. Writing test for the smart contact
+5. Writing test for the smart contract
 6. Adding user referral reward features
-7. Implementig social connect login for Twitter and GitHub
+7. Implementing social connect login for Twitter and GitHub
 
 ### Overview
 
@@ -37,7 +37,7 @@ The dApp is a 3 in 1 solution to solving issues related to financial inclusion a
 - **Backend**: Solidity, Ethereum blockchain
 - **Smart Contracts**: Foundry
 - **Deployment**: Alfajores(present deployment for the hackathon)
-- **Contract Address**: Alfajores 0x68bCc5126a64c699d7aA103F4D27396f6906EaDF
+- **Contract Address**: Alfajores 0xdFa504C66e22A07f42C5616c873829cBCcee38cd
 - **Tokens**: `MST` MiniSafe Token as reward for locking up funds for both depositor and the upliner who referred.
 
 ### Setup Instructions
