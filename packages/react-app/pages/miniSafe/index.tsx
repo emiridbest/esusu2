@@ -201,15 +201,14 @@ export default function Home() {
       const provider = new BrowserProvider(window.ethereum);
       const signer = await provider.getSigner(userAddress);
       const contract = new Contract(contractAddress, abi, signer);
-      const withdrawValue = parseEther(withdrawAmount.toString());
       const gasLimit = parseInt("600000");
 
       try {
         let tx;
         if (selectedToken === 'CELO') {
-          tx = await contract.withdraw(celoAddress, withdrawValue, { gasLimit });
+          tx = await contract.withdraw(celoAddress, { gasLimit });
         } else if (selectedToken === 'cUSD') {
-          tx = await contract.withdraw(cUsdTokenAddress, withdrawValue, { gasLimit });
+          tx = await contract.withdraw(cUsdTokenAddress, { gasLimit });
         }
         await tx.wait();
         getBalance();
@@ -336,17 +335,6 @@ export default function Home() {
             <div className="bg-gypsum p-6 rounded-lg shadow-md mb-4 bg-gradient-to-br from-gypsum to-gray-50 bg-opacity-75 backdrop-filter backdrop-blur-lg border border-gray-300 rounded-lg shadow-lg">
               <h3 className="text-sm font-semibold text-black mb-2">Withdraw</h3>
               <form onSubmit={handleWithdraw}>
-                <div className="mb-4">
-                  <label className="text-sm font-light text-gray-500 mb-2" htmlFor="withdraw-amount">Amount</label>
-                  <input
-                    id="withdraw-amount"
-                    value={withdrawAmount}
-                    onChange={(e) => setWithdrawAmount(Number(e.target.value))}
-                    className="w-full border border-gray-300 p-2 rounded-md"
-                    type="text"
-                    placeholder="Amount to withdraw"
-                  />
-                </div>
                 <button
                   type="submit"
                   className="w-full bg-prosperity shadow text-black py-2 rounded-md hover:bg-black hover:text-white transition"

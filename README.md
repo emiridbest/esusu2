@@ -5,11 +5,10 @@
 - We implemented a referral feature to reward users who tell their friends about our solutions
 - This creates an `upliner` and `downliner` relationship
 - When a `downliner` makes a deposit,
-  - `downliner` earns `2 MST` token
-  - `upliner` earns `1 MST` token as referral reward
- ![Esusu referral](https://github.com/user-attachments/assets/c0764eac-6684-431b-80fa-55a8cbc21ced)
+  - `downliner` earns `2 MST` reward points
+  - `upliner` earns `1 MST` reward point as referral reward
 
-
+![Esusu referral](https://github.com/user-attachments/assets/c0764eac-6684-431b-80fa-55a8cbc21ced)
 
 ### Summary of Milestone
 
@@ -20,6 +19,15 @@
 5. Writing test for the smart contract
 6. Adding user referral reward features
 7. Implementing social connect login for Twitter and GitHub
+8. Our `reward points` is an innovative approach to `gamification` where we are leveraging `ERC20` token standard to manage point allocation to increase transparency.
+
+### TO DO
+
+1. Implement phone number identifiers
+2. Manual smart contract review(Aderyn and Slither static analysis done)
+3. Get feedback on the feature and consider intergration into the final MVP
+4. Writing test for the other contracts
+5. Consider a different a smart contract to handle the referral system across all 3 contracts
 
 ### Overview
 
@@ -28,7 +36,7 @@ ESUSU is a decentralized application (DApp) built on the Celo Mainnet  that faci
 The dApp is a 3 in 1 solution to solving issues related to financial inclusion and poor savings trend. the sectios are
 
 - Esusu thrift contribution => % users joibn a contribution campaign where they pool their funds evrymonth for 5 months . For every month a unique user takes home the total contribution giving everyone access to `bulk money` which naturally the couldnt have saved up. This also elemintaes the need to borrow money for fundung big projects.
-- Esusu piggy box => Funds are locked up over time so that users no longer have access to them. They earn `MST` tokens for locking up funds but loss these tokens if the decide to break the lock.
+- Esusu piggy box => Funds are locked up over time so that users no longer have access to them. They earn `MST` reward points for locking up funds but loss these reward points if the decide to break the lock.
 - Esusu pay bills => users can pay for their utility and also make donations to their various projects.
 
 ### Technologies Used
@@ -38,7 +46,7 @@ The dApp is a 3 in 1 solution to solving issues related to financial inclusion a
 - **Smart Contracts**: Foundry
 - **Deployment**: Alfajores(present deployment for the hackathon as well as demo video)
 - **Contract Address**: Alfajores 0xdFa504C66e22A07f42C5616c873829cBCcee38cd Mainnet 0x7A7347FC748f12160CFB9F89f6faC2376c0495A9
-- **Tokens**: `MST` MiniSafe Token as reward for locking up funds for both depositor and the upliner who referred.
+- **Reward Points**: `MST` MiniSafe reward point as reward for locking up funds for both depositor and the upliner who referred.
 
 ### Setup Instructions
 
@@ -66,7 +74,7 @@ The dApp is a 3 in 1 solution to solving issues related to financial inclusion a
 
 - Create an account or connect your Celo Minipay wallet.
 - Go to the `site tester` in minipay
-- Enter <http://esusu-two.vercel.app>
+- Enter `http://esusu-two.vercel.app`
 
 - **Esusu Referrers**
 
@@ -83,7 +91,7 @@ The dApp is a 3 in 1 solution to solving issues related to financial inclusion a
         Balance.tsx to return your `cUSD` wallet balance
         SocialProfile.tsx to return profile details of the connected user
         SocialConnectUI.tsx to signIn, signOut of sessions amd also `register`and `revoke` identifiers
-        TransactionList.tsx to return transaction history on `cUSD` tokens of the connected user
+        TransactionList.tsx to return transaction history on `cUSD` reward points of the connected user
     /SocialConnect includes helper files
         /abis hold contractABI for various socialConnect protocol
     /public includes static files
@@ -118,17 +126,3 @@ This project is licensed under the [MIT License](LICENSE).
 ![10](https://github.com/user-attachments/assets/a94ed227-ed71-4191-9161-3fe6dcdcc26e)
 ![12](https://github.com/user-attachments/assets/695724cf-c259-4d70-95ce-528245f101ad)
 ![13](https://github.com/user-attachments/assets/ce7e9cbf-bacb-4a29-bc8e-fcdbe6e46b82)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
