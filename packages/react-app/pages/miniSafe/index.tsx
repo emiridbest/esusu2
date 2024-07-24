@@ -189,9 +189,8 @@ export default function Home() {
     setButtonText('Deposit');
   };
 
-  const handleWithdraw = async (event: React.FormEvent) => {
-    event.preventDefault();
-    if (!withdrawAmount || !selectedToken) return;
+  const handleWithdraw = async () => {
+    if (!selectedToken) return;
     if (window.ethereum) {
       let accounts = await window.ethereum.request({
         method: "eth_requestAccounts",
@@ -334,14 +333,13 @@ export default function Home() {
             </div>
             <div className="bg-gypsum p-6 rounded-lg shadow-md mb-4 bg-gradient-to-br from-gypsum to-gray-50 bg-opacity-75 backdrop-filter backdrop-blur-lg border border-gray-300 rounded-lg shadow-lg">
               <h3 className="text-sm font-semibold text-black mb-2">Withdraw</h3>
-              <form onSubmit={handleWithdraw}>
                 <button
                   type="submit"
+                  onClick={handleWithdraw}
                   className="w-full bg-prosperity shadow text-black py-2 rounded-md hover:bg-black hover:text-white transition"
                 >
                   Withdraw
                 </button>
-              </form>
             </div>
             <div className="bg-gypsum p-6 rounded-lg shadow-md mb-4 bg-gradient-to-br from-gypsum to-gray-50 bg-opacity-75 backdrop-filter backdrop-blur-lg border border-gray-300 rounded-lg shadow-lg">
               <h3 className="text-sm font-semibold text-black mb-2">Break Timelock</h3>
